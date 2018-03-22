@@ -2,16 +2,42 @@ import React from 'react';
 import {
   Image,
   View,
-  Text
+  Text,
+  StyleSheet
 } from 'react-native';
-import styles from './index.style';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 import Menu from './menu';
 
+
+const styles = StyleSheet.create({
+  wrapper: {
+    alignSelf: 'flex-start',
+    marginTop: getStatusBarHeight(),
+    width: '100%',
+    display: 'flex',
+    height: 131,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'relative'
+  },
+  image: {
+    position: 'absolute',
+    top: 0,
+    height: 131,
+    width: '100%'
+  },
+  text: {
+    color: 'white',
+    fontWeight: '800',
+    fontSize: 28
+  }
+});
+
 const Header = props => {
-  const { image, text } = styles;
+  const { wrapper, image, text } = styles;
 
   return (
-    <View>
+    <View style={wrapper}>
       <Image style={image} source={props.source} />
       <Menu />
       <Text style={text}>{props.text}</Text>
@@ -20,3 +46,9 @@ const Header = props => {
 };
 
 export default Header;
+
+/* 
+<Image style={image} source={props.source} />
+      <Menu />
+      
+*/

@@ -1,25 +1,27 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import styles from './menu.style';
+
+const styles = StyleSheet.create({
+  wrapper: {
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    top: 0,
+    padding: 7
+  }
+});
 
 const Menu = props => {
-  const { menu, icon, iconWrapper, test } = styles;
-  console.log('some stugg')
+  const { wrapper } = styles;
   return (
-    <View style={test}>
-      <Text>Some text</Text>
+    <View style={wrapper}>
+      <Icon name="angle-left" size={31} color="white" />
+      <Icon name="ellipsis-h" size={31} color="white" />
     </View>
   );
 };
 
 export default Menu;
-
-/*
-      <View style={iconWrapper}>
-        <Icon style={icon} name="angle-left" size={31} color="white" />
-      </View>
-      <View style={iconWrapper}>
-        <Icon style={icon} name="ellipsis-h" size={31} color="white" />
-      </View>
-*/
