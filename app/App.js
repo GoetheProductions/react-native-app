@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 
 import { Text, View, StyleSheet, StatusBar } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchUsers } from './actions/users';
 import Header from './components/header';
 import ActionButton from './components/action_button';
 import { bgImage } from './components/header/constants';
 
-export default class App extends Component {
+
+const mapStateToProps = ({ users }) => ({ users });
+
+const mapDispatchToProps = dispatch => bindActionCreators({ fetchUsers }, dispatch);
+
+@connect(mapStateToProps, mapDispatchToProps)
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchUsers();
+
+    console.log('this.props ', this.props);
+  }
+
   render() {
     const isCustomer = true;
     const styles = StyleSheet.create({
@@ -30,3 +45,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
