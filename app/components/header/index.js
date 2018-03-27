@@ -6,7 +6,7 @@ import {
   StyleSheet
 } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import Menu from './menu';
+import Menu from './Menu';
 
 
 const styles = StyleSheet.create({
@@ -46,9 +46,3 @@ const Header = props => {
 };
 
 export default Header;
-
-/* 
-<Image style={image} source={props.source} />
-      <Menu />
-      
-*/

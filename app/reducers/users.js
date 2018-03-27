@@ -17,7 +17,7 @@ export default (state = defaultState, action) => {
     case FETCH_USERS_SUCCESS:
       return {
         isFetching: false,
-        users: action.payload,
+        users: action.payload.data,
       };
 
     case FETCH_USERS_ERROR:

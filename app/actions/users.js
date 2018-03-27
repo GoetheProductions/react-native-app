@@ -1,5 +1,6 @@
 import { FETCH_USERS, FETCH_USERS_ERROR, FETCH_USERS_SUCCESS } from '../constants';
 import { API } from '../../constants';
+import api from '../utils/methods';
 
 
 export function fetchUsers() {
@@ -8,11 +9,11 @@ export function fetchUsers() {
       type: FETCH_USERS,
     });
     try {
-      const response = await fetch(`${API}/users`);
+      // const response = await fetch(`${API}/users`);
 
       dispatch({
         type: FETCH_USERS_SUCCESS,
-        payload: response,
+        payload: await api.GET(`${API}/users`), // await response.json(),
       });
     } catch (error) {
       dispatch({
