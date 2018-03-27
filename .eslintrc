@@ -1,6 +1,8 @@
 {
   "extends": "rallycoding",
   "globals": {
-    "__DEV__": true
+    "__DEV__": true,
+    "fetch": true,
+    "alert": true
   }
 }
