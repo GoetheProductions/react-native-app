@@ -6,7 +6,7 @@ import {
   StyleSheet
 } from 'react-native';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
-import Menu from './menu';
+import Menu from './Menu';
 
 
 const styles = StyleSheet.create({
