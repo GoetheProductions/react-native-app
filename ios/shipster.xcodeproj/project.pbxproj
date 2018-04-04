@@ -22,6 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		1AB2A970ECAA48F694CFFE2D /* SignPainter HouseScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E91FB0CCD804A17A1F0CF42 /* SignPainter HouseScript.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -36,6 +37,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* shipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* shipsterTests.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		BF98BBFA64AB4A99AE823984 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6276251D62FC4BB1A1AA3617 /* libRNVectorIcons.a */; };
 		FC310C4D1FE9A52200501DC2 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		FCF99CBF204F34F5007896CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
 		FCF99CE5204F34F6007896CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB61A68108700A75B9A /* Info.plist */; };
@@ -313,6 +315,13 @@
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
 		};
+		FCB5C74B207535F90010C1BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCCB525BA40C441BAE52715F /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
+		};
 		FCF99CA2204F3033007896CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -381,6 +390,7 @@
 		00E356EE1AD99517003FC87E /* shipsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shipsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* shipsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shipsterTests.m; sourceTree = "<group>"; };
+		0E91FB0CCD804A17A1F0CF42 /* SignPainter HouseScript.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SignPainter HouseScript.ttf"; path = "../assets/fonts/SignPainter HouseScript.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* shipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,9 +404,12 @@
 		2D02E47B1E0B4A5D006451C7 /* shipster-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "shipster-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* shipster-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "shipster-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6276251D62FC4BB1A1AA3617 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		DCCB525BA40C441BAE52715F /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		FCB5C6F0207534CF0010C1BA /* SignPainter HouseScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter HouseScript.ttf"; sourceTree = "<group>"; };
 		FCF99CEC204F45E4007896CA /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		FCF99CF1204F45EE007896CA /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		FCF99CF6204F45F4007896CA /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
@@ -437,6 +450,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				BF98BBFA64AB4A99AE823984 /* libRNVectorIcons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +572,7 @@
 				FCF99D19204F461F007896CA /* Octicons.ttf */,
 				FCF99D1E204F4624007896CA /* Octicons.ttf */,
 				FCF99D23204F4628007896CA /* SimpleLineIcons.ttf */,
+				FCB5C6F0207534CF0010C1BA /* SignPainter HouseScript.ttf */,
 				FCF99D00204F4600007896CA /* Foundation.ttf */,
 				FCF99D0A204F4610007896CA /* Ionicons.ttf */,
 				FCF99CFB204F45F9007896CA /* FontAwesome.ttf */,
@@ -627,6 +642,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				DCCB525BA40C441BAE52715F /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -647,6 +663,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* shipsterTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				D086AB10BEF74B30B83A305F /* Resources */,
+				FCB5C722207535F70010C1BA /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -669,6 +687,30 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				FC310C541FE9A52300501DC2 /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D086AB10BEF74B30B83A305F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E91FB0CCD804A17A1F0CF42 /* SignPainter HouseScript.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCB5C722207535F70010C1BA /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				6276251D62FC4BB1A1AA3617 /* libRNVectorIcons.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		FCB5C748207535F90010C1BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCB5C74C207535F90010C1BA /* libRNVectorIcons.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -754,7 +796,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 920;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -831,6 +873,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = FCB5C748207535F90010C1BA /* Products */;
+					ProjectRef = DCCB525BA40C441BAE52715F /* RNVectorIcons.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1047,6 +1093,13 @@
 			remoteRef = FC310C671FE9A52300501DC2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FCB5C74C207535F90010C1BA /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = FCB5C74B207535F90010C1BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FCF99CA3204F3033007896CA /* libjsinspector.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1147,6 +1200,7 @@
 				FCF99D24204F4628007896CA /* SimpleLineIcons.ttf in Resources */,
 				FCF99D10204F4618007896CA /* MaterialCommunityIcons.ttf in Resources */,
 				FCF99D29204F462C007896CA /* Zocial.ttf in Resources */,
+				1AB2A970ECAA48F694CFFE2D /* SignPainter HouseScript.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,9 +1351,17 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = shipsterTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1315,9 +1377,17 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = shipsterTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1334,6 +1404,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = shipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1352,6 +1426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = shipster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1377,8 +1455,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = "shipster-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1403,8 +1489,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 				INFOPLIST_FILE = "shipster-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1430,6 +1524,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "shipster-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.shipster-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1451,6 +1549,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "shipster-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.shipster-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

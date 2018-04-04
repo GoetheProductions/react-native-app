@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,7 +51,11 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Entypo.ttfEvilIcons.ttfFeather.ttfFontAwesome.ttf</string>
+		<string>SignPainter HouseScript</string>
+		<string>Entypo.ttf
+EvilIcons.ttf
+Feather.ttf
+FontAwesome.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>Feather.ttf</string>
 		<string>FontAwesome.ttf</string>
@@ -62,6 +66,7 @@
 		<string>Octicons.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>SignPainter HouseScript.ttf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
