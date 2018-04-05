@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">shipster</string>
+    <string name="facebook_app_id">220874675315438</string>
+    <string name="fb_login_protocol_scheme">fb220874675315438</string>
 </resources>
