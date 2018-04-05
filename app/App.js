@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import { View, StatusBar, StyleSheet, Image, Text } from 'react-native';
+import { LoginManager } from 'react-native-fbsdk';
 import SocialLogin from './components/login';
 import { techtable } from '../constants';
 
 
 class App extends Component {
+  loginWithFacebook() {
+    LoginManager.logInWithReadPermissions(['public_profile']).then((result) => {
+      if (result.isCancelled) {
+        console.log('Login was cancelled');
+      } else {
+        console.log('Success', result);
+      }
+    },
+      (error) => {
+        console.log('error', error);
+      }
+    );
+  }
+
   render() {
     const styles = StyleSheet.create({
       wrapper: {
@@ -42,12 +57,3 @@ class App extends Component {
 }
 
 export default App;
-
-/*
-  <SocialLogin
-    type="google-plus-official"
-    title="Log ind med Google"
-    onPress={() => this.loginWithGoogle()}
-  />
-*/
-

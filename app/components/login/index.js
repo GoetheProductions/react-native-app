@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import { SocialIcon } from 'react-native-elements';
 
 export default class SocialLogin extends Component {
-  handleLogin() {
-    console.log('clicked');
-  }
-
   render() {
-    const { type, title } = this.props;
+    const { type, title, onPress } = this.props;
 
     return (
       <SocialIcon
@@ -15,7 +11,7 @@ export default class SocialLogin extends Component {
         title={title}
         button
         type={type}
-        onPress={() => this.handleLogin()}
+        onPress={onPress}
       />
     );
   }
