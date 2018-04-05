@@ -1,5 +1,11 @@
 {
+  "parser": "babel-eslint",
   "extends": "rallycoding",
+  "rules": {
+    "arrow-body-style": "off",
+    "no-console": "off",
+    "no-continue": "off"
+  },
   "globals": {
     "__DEV__": true
   }
