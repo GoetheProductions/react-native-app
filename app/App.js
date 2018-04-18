@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
 import { View, StatusBar, StyleSheet, Image, Text } from 'react-native';
-import { LoginManager } from 'react-native-fbsdk';
+import FBSDK, { LoginManager, AccessToken } from 'react-native-fbsdk';
 import SocialLogin from './components/login';
 import { techtable } from '../constants';
+import secureStorage from './utils/secureStorage';
 
 
 class App extends Component {
-  loginWithFacebook() {
-    LoginManager.logInWithReadPermissions(['public_profile']).then((result) => {
-      if (result.isCancelled) {
-        console.log('Login was cancelled');
-      } else {
-        console.log('Success', result);
-      }
-    },
-      (error) => {
-        console.log('error', error);
-      }
-    );
+  loginWithFacebook = () => {
+    LoginManager.logInWithReadPermissions(['email', 'public_profile'])
+      .then((result) => {
+        if (result.isCancelled) {
+          console.log('Login was cancelled');
+        } else {
+          AccessToken.getCurrentAccessToken().then(
+            (data) => {
+              secureStorage(data.accessToken.toString());
+            }
+          );
+        }
+      },
+      (error) => console.log('error', error)
+      );
   }
 
   render() {
