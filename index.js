@@ -5,7 +5,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
-import App from './app/App';
+import Router from './app/Router';
 
 const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ });
 
@@ -23,7 +23,7 @@ const store = configureStore({});
 
 const AppWithRedux = () => (
   <Provider store={store}>
-    <App />
+    <Router />
   </Provider>
 );
 
