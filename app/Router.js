@@ -1,13 +1,15 @@
 import React from 'react';
 import { Scene, Router } from 'react-native-router-flux';
-import LoginForm from './components/LoginForm';
-import TestComponent from './components/TestComponent';
+import Login from './components/scenes/Login';
+import RoleSelection from './components/scenes/RoleSelection';
+import MoreInfo from './components/scenes/MoreInfo';
 
 const RouterComponent = () => (
   <Router>
     <Scene key="root" hideNavBar="true">
-      <Scene key="login" component={LoginForm} initial />
-      <Scene key="test" component={TestComponent} />
+      <Scene key="login" component={Login} initial />
+      <Scene key="moreInfo" component={MoreInfo} />
+      <Scene key="roleSelection" component={RoleSelection} />
     </Scene>
   </Router>
 );

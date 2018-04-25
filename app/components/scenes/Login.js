@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import FBSDK, { LoginManager, AccessToken } from 'react-native-fbsdk';
 import { Actions } from 'react-native-router-flux';
-import SocialLogin from '../components/login';
-import { techtable } from '../../constants';
-import secureStorage from '../utils/secureStorage';
+import SocialLogin from '../login';
+import { techtable } from '../../../constants';
+import secureStorage from '../../utils/secureStorage';
 
 
 class LoginForm extends Component {
@@ -19,7 +19,7 @@ class LoginForm extends Component {
               // set token
               secureStorage(data.accessToken.toString());
               if (data) {
-                Actions.test(); // route to navigate to
+                Actions.moreInfo(); // route to navigate to
               }
 
               // send request to backend via redux

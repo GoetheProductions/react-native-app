@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native-elements';
+import { TouchableHighlight, Text, StyleSheet } from 'react-native';
 
 
 export default class ActionButton extends Component {
   render() {
-    const { isDangerZone, text } = this.props;
+    const { isDangerZone, text, onPress } = this.props;
+
+    const styles = StyleSheet.create({
+      button: {
+        backgroundColor: isDangerZone ? '#E07171' : '#EF8354',
+        borderRadius: 4,
+        padding: 10,
+        width: '100%'
+      },
+      text: {
+        color: isDangerZone ? '#FFC3C3' : '#FFC1A7',
+        fontSize: 15,
+        textAlign: 'center'
+      }
+    });
 
     return (
-      <Button
-        buttonStyle={{
-          backgroundColor: isDangerZone ? '#E07171' : '#EF8354',
-          borderRadius: 4,
-          padding: 5
-        }}
-        textStyle={{
-          color: isDangerZone ? '#FFC3C3' : '#FFC1A7',
-          fontSize: 15,
-        }}
-        text={text}
-      />
+      <TouchableHighlight style={styles.button} onPress={onPress}>
+        <Text style={styles.text}>{text}</Text>
+      </TouchableHighlight>
     );
   }
 }

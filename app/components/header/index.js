@@ -49,6 +49,5 @@ export default Header;
 
 /* 
 <Image style={image} source={props.source} />
-      <Menu />
-      
+  <Menu />
 */

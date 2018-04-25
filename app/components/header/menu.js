@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { Actions } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -18,8 +19,8 @@ const Menu = props => {
   const { wrapper } = styles;
   return (
     <View style={wrapper}>
-      <Icon name="angle-left" size={31} color="white" />
-      <Icon name="ellipsis-h" size={31} color="white" />
+      {props.back && <Icon name="angle-left" size={31} color="white" onPress={() => Actions.pop()} />}
+      {props.subMenu && <Icon name="ellipsis-h" size={31} color="white" />}
     </View>
   );
 };
