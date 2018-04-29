@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import FBSDK, { LoginManager, AccessToken } from 'react-native-fbsdk';
 import { Actions } from 'react-native-router-flux';
-import SocialLogin from '../login';
+import { SocialIcon } from 'react-native-elements';
 import { techtable } from '../../../constants';
 import secureStorage from '../../utils/secureStorage';
 
@@ -55,10 +55,11 @@ class LoginForm extends Component {
       <View style={styles.wrapper}>
         <Image style={styles.image} source={techtable} />
         <Text style={styles.text}>Log ind på Shipster</Text>
-
-        <SocialLogin
-          type="facebook"
-          title="Log ind med Facebook"
+        <SocialIcon
+          style={{ borderRadius: 4 }}
+          title={'Log ind med Facebook'}
+          button
+          type={'facebook'}
           onPress={() => this.loginWithFacebook()}
         />
       </View>

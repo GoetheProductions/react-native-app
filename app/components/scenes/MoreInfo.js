@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import Button from '../action_button';
-import Header from '../header';
-import { coffeetable } from '../../../constants';
+import Button from '../common/action_button';
+import Wrapper from '../common/wrapper';
+import { foodtable } from '../../../constants';
 
 class RoleSelection extends Component {
   render() {
@@ -27,10 +27,13 @@ class RoleSelection extends Component {
       }
     });
     return (
-      <View style={styles.wrapper}>
-        <Header text="STAM INFORMATION" source={coffeetable} />
+      <Wrapper
+        headerHeadline={'OVERSIGT'}
+        source={foodtable}
+        subMenu
+      >
         <Button text={'GEM ÆNDRINGER'} onPress={() => Actions.roleSelection()} />
-      </View>
+      </Wrapper>
     );
   }
 }
