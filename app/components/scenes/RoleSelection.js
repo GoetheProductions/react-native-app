@@ -25,8 +25,6 @@ class RoleSelection extends Component {
         textAlign: 'center'
       }
     });
-
-    console.log(Actions)
     return (
       <View style={styles.wrapper}>
         <Image style={styles.image} source={techtable} />
