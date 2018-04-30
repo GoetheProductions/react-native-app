@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Image, Text } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import Menu from '../header/Menu';
 
@@ -10,17 +11,22 @@ class CustomerDashboard extends Component {
       wrapper: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: '#3D3D3D'
       },
 
       menu: {
-        backgroundColor: 'green',
         width: '100%',
-        height: 55
+        height: 55,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingLeft: 10,
+        paddingRight: 10
       },
 
       content: {
-        backgroundColor: 'black',
         width: '100%',
         height: 530
       },
@@ -51,11 +57,17 @@ class CustomerDashboard extends Component {
         top: 5,
         left: 5,
         color: 'white'
+      },
+      iconBars: {
+        borderWidth: 1,
+        borderRadius: 15,
+        borderColor: 'white',
+        padding: 7
       }
     });
 
     const { source, headerHeadline } = this.props;
-    const { headerText, headerImage, wrapper, header, content, menu, subMenu } = styles;
+    const { headerText, headerImage, wrapper, header, content, menu, iconBars } = styles;
 
     return (
       <View style={wrapper}>
@@ -70,7 +82,9 @@ class CustomerDashboard extends Component {
         </View>
 
         <View style={menu}>
-          <Text>Menu</Text>
+          <Icon name="bars" size={18} color="white" onPress={() => console.log('OVERVIEW')} style={iconBars} />
+          <Icon name="plus-circle" size={46} color="white" onPress={() => console.log('ADD')} />
+          <Icon name="cog" size={36} color="white" onPress={() => console.log('SETTINGS')} />
         </View>
       </View>
     );
