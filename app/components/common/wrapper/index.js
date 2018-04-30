@@ -82,9 +82,27 @@ class CustomerDashboard extends Component {
         </View>
 
         <View style={menu}>
-          <Icon name="bars" size={18} color="white" onPress={() => console.log('OVERVIEW')} style={iconBars} />
-          <Icon name="plus-circle" size={46} color="white" onPress={() => console.log('ADD')} />
-          <Icon name="cog" size={36} color="white" onPress={() => console.log('SETTINGS')} />
+          <Icon
+            name="bars"
+            size={18}
+            color="white"
+            onPress={() => console.log('OVERVIEW')}
+            style={iconBars}
+          />
+
+          <Icon
+            name="plus-circle"
+            size={46}
+            color="white"
+            onPress={() => console.log('ADD')}
+          />
+
+          <Icon
+            name="cog"
+            size={36}
+            color="white"
+            onPress={() => console.log('SETTINGS')}
+          />
         </View>
       </View>
     );
