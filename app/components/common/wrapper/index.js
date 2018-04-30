@@ -78,7 +78,7 @@ class CustomerDashboard extends Component {
         </View>
 
         <View style={content}>
-          <Text>CONTENT</Text>
+          <Text>{this.props.children}</Text>
         </View>
 
         <View style={menu}>
