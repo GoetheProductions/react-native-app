@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Wrapper from '../../common/wrapper';
-import { coffeetable } from '../../../../constants';
+import { foodtable } from '../../../../constants';
 import List from '../../common/list';
 
-class CustomerDashboard extends Component {
+class NewOrder extends Component {
   render() {
     return (
-      <Wrapper {...this.props} source={coffeetable} subMenu>
+      <Wrapper {...this.props} source={foodtable} subMenu>
         <List />
       </Wrapper>
     );
   }
 }
 
-export default CustomerDashboard;
+export default NewOrder;

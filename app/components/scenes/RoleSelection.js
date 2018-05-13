@@ -9,14 +9,12 @@ class RoleSelection extends Component {
     const styles = StyleSheet.create({
       wrapper: {
         height: '100%',
-        width: '100%',
         position: 'relative',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        padding: 13
       },
       image: {
-        flex: 1,
-        height: '100%',
-        width: '100%',
+        resizeMode: 'repeat',
         position: 'absolute',
       },
       text: {
@@ -25,12 +23,14 @@ class RoleSelection extends Component {
         textAlign: 'center'
       }
     });
+
+    const { wrapper, image, text } = styles;
     return (
-      <View style={styles.wrapper}>
-        <Image style={styles.image} source={techtable} />
-        <Text style={styles.text}>JEG VIL</Text>
+      <View style={wrapper}>
+        <Image style={image} source={techtable} />
+        <Text style={text}>JEG VIL</Text>
         <Button text={'HAVE LEVERET'} onPress={() => Actions.customerDashboard()} />
-        <Text style={styles.text}>ELLER</Text>
+        <Text style={text}>ELLER</Text>
         <Button text={'VÆRE SHIPPER'} onPress={() => Actions.shipperDashboard()} />
       </View>
     );

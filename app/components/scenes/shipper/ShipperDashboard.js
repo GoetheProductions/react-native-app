@@ -1,33 +1,15 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Image, Text } from 'react-native';
-import { Actions } from 'react-native-router-flux';
-import { techtable } from '../../../constants';
+import Wrapper from '../../common/wrapper';
+import { coffeetable } from '../../../../constants';
+import List from '../../common/list';
 
 class ShipperDashboard extends Component {
   render() {
-    const styles = StyleSheet.create({
-      wrapper: {
-        height: '100%',
-        width: '100%',
-        position: 'relative',
-        justifyContent: 'center'
-      },
-      image: {
-        flex: 1,
-        height: '100%',
-        width: '100%',
-        position: 'absolute',
-      },
-      text: {
-        fontFamily: 'SignPainter HouseScript',
-        color: 'white',
-        textAlign: 'center'
-      }
-    });
+    console.log('props ', this.props);
     return (
-      <View style={styles.wrapper}>
-        <Text style={styles.text}>Shipper dashboard</Text>
-      </View>
+      <Wrapper {...this.props} source={coffeetable} subMenu>
+        <List />
+      </Wrapper>
     );
   }
 }
