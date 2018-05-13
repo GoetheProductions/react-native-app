@@ -4,31 +4,42 @@ import { Actions } from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import Menu from '../header/Menu';
+import SlideMenu from '../header/SlideMenu';
 
 class CustomerDashboard extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      open: false
+    };
+  }
+
+  handleToggleDropDown = () => this.setState({ open: !this.state.open });
+
   render() {
     const styles = StyleSheet.create({
       wrapper: {
-        display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        backgroundColor: '#3D3D3D'
+        backgroundColor: '#3D3D3D',
+        flex: 10
       },
 
       menu: {
         width: '100%',
-        height: 55,
-        display: 'flex',
-        flexDirection: 'row',
+        flex: 1,
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingLeft: 10,
-        paddingRight: 10
+        flexDirection: 'row',
+        padding: 10
       },
 
       content: {
         width: '100%',
-        height: 530
+        flex: this.props.hideMenu ? 8 : 7,
+        flexDirection: 'column',
+        padding: 13
       },
 
       header: {
@@ -37,13 +48,13 @@ class CustomerDashboard extends Component {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-        height: 131
+        flex: 2
       },
 
       headerImage: {
         position: 'absolute',
         top: 0,
-        height: 131,
+        height: '100%',
         width: '100%'
       },
 
@@ -66,44 +77,55 @@ class CustomerDashboard extends Component {
       }
     });
 
-    const { source, headerHeadline } = this.props;
+    const {
+      source,
+      title,
+      navigation: {
+        state: { routeName }
+      }
+    } = this.props;
     const { headerText, headerImage, wrapper, header, content, menu, iconBars } = styles;
 
     return (
       <View style={wrapper}>
         <View style={header}>
           <Image style={headerImage} source={source} />
-          <Menu back subMenu />
-          <Text style={headerText}>{headerHeadline}</Text>
+          <Menu back subMenu onPress={this.handleToggleDropDown} />
+          <Text style={headerText}>{title}</Text>
         </View>
 
         <View style={content}>
-          <Text>{this.props.children}</Text>
+          {this.props.children}
         </View>
 
-        <View style={menu}>
-          <Icon
-            name="bars"
-            size={18}
-            color="white"
-            onPress={() => console.log('OVERVIEW')}
-            style={iconBars}
-          />
+        {!this.props.hideMenu && (
+          <View style={menu}>
+            <Icon
+              name="bars"
+              size={18}
+              color="white"
+              onPress={() => routeName !== 'customerDashboard' && Actions.customerDashboard()}
+              style={iconBars}
+            />
 
-          <Icon
-            name="plus-circle"
-            size={46}
-            color="white"
-            onPress={() => console.log('ADD')}
-          />
+            <Icon
+              name="plus-circle"
+              size={46}
+              color="white"
+              onPress={() => routeName !== 'newOrder' && Actions.newOrder()}
+            />
 
-          <Icon
-            name="cog"
-            size={36}
-            color="white"
-            onPress={() => console.log('SETTINGS')}
-          />
-        </View>
+            <Icon
+              name="cog"
+              size={36}
+              color="white"
+              onPress={() => routeName !== 'settings' && Actions.settings()}
+            />
+          </View>
+        )}
+        {this.state.open && (
+          <SlideMenu handleCloseMenu={this.handleToggleDropDown} />
+        )}
       </View>
     );
   }

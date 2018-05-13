@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Actions } from 'react-native-router-flux';
-import HeaderDropDown from './HeaderDropDown';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -17,30 +16,23 @@ const styles = StyleSheet.create({
   placeholderStyles: { height: 1, width: 1 }
 });
 
-export default class Menu extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      open: false
-    };
-  }
-
-  handleToggleDropDown = () => this.setState({ open: !this.state.open });
-
+export default class ShipsterMenu extends Component {
   render() {
     const { wrapper, placeholderStyles } = styles;
-    const { back, subMenu } = this.props;
-    const { open } = this.state;
+    const { back, subMenu, onPress } = this.props;
     const placeholder = (<View style={placeholderStyles} />);
 
     return (
       <View style={wrapper}>
         {back ? <Icon name="angle-left" size={31} color="white" onPress={() => Actions.pop()} style={subMenu} /> : placeholder}
-        {subMenu && <Icon name="ellipsis-h" size={31} color="white" onPress={this.handleToggleDropDown} />}
-
-        {open && <HeaderDropDown />}
-
+        {subMenu && (
+          <Icon
+            name="ellipsis-h"
+            size={31}
+            color="white"
+            onPress={onPress}
+          />
+        )}
       </View>
     );
   }
